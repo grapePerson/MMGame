@@ -1,0 +1,372 @@
+@font-face{
+font-family: 'CupheadMemphisMedium';
+src: url('../fonts/CupheadMemphisMedium.ttf');
+font-weight: normal;
+font-style: normal;
+}
+body{
+  background-image: url(../images/body-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "CupheadMemphisMedium";
+}
+ol{
+  color: white
+}
+main{
+  width: 100%
+}
+header{
+  width: 100%;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  display: flex;
+}
+input[type="text"]{
+  text-align: center;
+  width: 300px;
+  height: 30px;
+  margin: 10px 0px 33px 0px;
+  cursor: default;
+}
+input[type="radio"]{
+  margin-right: 10px;
+
+}
+input{
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+}
+h1{
+  width: 370px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+}
+.field{
+  background: rgba(0,0,0,0.7);
+  width: 1460px;
+  height: 800px;
+  margin: 0 auto;
+  color:  white;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rules-container{
+  width: 100%;
+  height: 100%;
+}
+.rules-container h2,h3{
+  width: 100%;
+  text-align: center;
+}
+.rules-container h2 + p{
+  width: 100%;
+  text-align: center;
+}
+.rules-list{
+  width: 50%;
+}
+.rules-list li{
+  padding: 20px 0px;
+}
+.rules-button-next{
+  display: block;
+  margin: 0 auto;
+}
+.signin-container{
+  width: 100%;
+  height: 100%;
+}
+.login-container{
+  width: 100%;
+  height: 100%;
+}
+.unactive{
+  display: none;
+}
+.active{
+  display: block;
+}
+.form-elements-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button-back-to-rules{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0px 0px 20px 20px;
+}
+.button-play-game{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0px 20px 20px 0px;
+}
+.button-next{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0px 20px 20px 0px;
+}
+.error-message{
+  position: absolute;
+  background: rgba(1,1,100,0.7);
+  color: yellow;
+  width: 500px;
+  height: 150px;
+  top: 50%;
+  margin-top: -75px;
+  z-index: 100;
+  left: -500px;
+  transition: left 1s;
+  text-align: center;
+  border-radius:0px 10px 10px 0px;
+}
+.error-button-ok{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px 20px 20px 0px;
+}
+.button-login{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0px 0px 20px -31px;
+}
+.game-settings{
+  position: absolute;
+  z-index: 2;
+  width: 120px;
+  height: 150px;
+  background: rgba(255,255,255,0.7);
+  top: -130px;
+  left: 75px;
+  transition: top 0.5s;
+  border-radius:0px 0px 10px 10px;
+  cursor: pointer;
+}
+.game-settings p{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.game-settings:hover{
+  top: 0px;
+}
+.game-settings-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-settings-list li{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  padding: 10px 0px 5px 0px;
+}
+.images-list {
+  display: flex;
+  flex-direction: row;
+
+}
+.images-list li{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.images-list li img{
+  display: block;
+  border-radius: 20px;
+
+}
+.card-front-side{
+  background: #121028;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid darkslategrey;
+}
+.card-shirt{
+  backface-visibility: hidden;
+  z-index: 3;
+}
+.card-flipper{
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card-back-side , .card-front-side , .card-flipper{
+  width: 170px;
+  height: 250px;
+ }
+ .card-back-side{
+   transform: rotateY(180deg);
+ }
+ .card-front-side, .card-back-side {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+.do-flipp{
+  transform: rotateY(180deg);
+}
+.cards-style{
+  position: absolute;
+  top: -500px;
+  left: 195px;
+  z-index: 1;
+  background: rgba(255,255,255,0.7);
+  height: 520px;
+  border-radius: 0px 0px 10px 10px;
+  transition: top 0.5s;
+}
+.cards-style p{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  text-align:center;
+}
+.cards-style:hover{
+  top:0px;
+}
+.shrit-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.shrit-list li{
+  transition: background 1s;
+}
+.shrit-list li img{
+  display: block;
+}
+.shrit-list li:hover{
+  background: #223474;
+  cursor: pointer;
+}
+
+.checkedShirt{
+  background: #223474;
+}
+.hide-card{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.you-win{
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background:rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.you-win article{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  width: 500px;
+  top: 50%;
+  margin:-100px 0px 0px -250px;
+  left: 50%;
+}
+.game-container{
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+  box-shadow:0px 0px 20px 1px white;
+}
+.top10-list{
+  width: 100%;
+}
+.top10-list li{
+  margin: 20px 0px 20px 20px;
+  word-wrap: break-word;
+}
+.top10-list li:first-child{
+  margin-top: 0px;
+}
+.top-score{
+  width: 300px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  background: rgba(255,255,255,0.7);
+  left: -300px;
+  transition: left 1s;
+  top: 115px;
+  border-radius: 0px 10px 10px 0px;
+}
+.top-score p{
+  width: 100%;
+  text-align: center;
+  margin: 1px 0px 1px 0px;
+}
+.control-sound-panel{
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0px 10px 10px 0px;
+  z-index: 2;
+  width: 126px;
+  left: -92px;
+  transition: left 1s;
+}
+.control-sound-panel:hover{
+  left: 0px;
+}
+.sound-buttons{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.sound-buttons li{
+  height: 32px;
+  width: 32px;
+  margin: 2px 5px 2px 5px;
+  cursor: pointer;
+}
+.stop{
+  background-image: url(../images/stop.png);
+}
+.play{
+  background-image: url(../images/play.png);
+}
+.volume-up{
+  background-image: url(../images/plus.png);
+}
+.volume-down{
+  background-image: url(../images/minus.png);
+}
+.Top10-button{
+  position: absolute;
+  bottom: 0;
+}

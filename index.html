@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/index.css">
+    <title>Match-Match Game</title>
+  </head>
+  <body>
+    <audio src="audio/main-theme.mp3"  id="mainTheme" autoplay>
+    </audio>
+    <header>
+      <h1>Match-Match Game</h1>
+    </header>
+    <main>
+      <input type="button" name="" value="Top 10" id="showTop" class="Top10-button">
+      <section class="control-sound-panel">
+        <ul class="sound-buttons">
+          <li class="stop"></li>
+          <li class="volume-up"> </li>
+          <li class="volume-down"></li>
+        </ul>
+      </section>
+      <section class="error-message">
+        <p class="error-text"></p>
+        <input type="button" value="OK" id="errorButtonOk" class="error-button-ok">
+      </section>
+      <section class="game-settings">
+        <ul class="game-settings-list">
+          <li>
+            <input type="radio" id="difficult1" name="difficult" value="5 X 2" checked>
+            <label for="difficult1">5 X 2</label>
+          </li>
+          <li>
+            <input type="radio" id="difficult2" name="difficult" value="6 X 3">
+            <label for="difficult2">6 X 3</label>
+          </li>
+          <li>
+            <input type="radio" id="difficult3" name="difficult" value="8 X 3">
+            <label for="difficult3">8 X 3</label>
+          </li>
+        </ul>
+        <p>Сложность</p>
+      </section>
+      <section class="top-score">
+        <p>Топ 10</p>
+        <ul class="top10-list">
+        </ul>
+      </section>
+      <section class="cards-style">
+        <ul class="shrit-list">
+          <li class="checkedShirt" name="images/Blizzard-shirt.png"> <img src="images/Blizzard-shirt.png" alt=""> </li>
+          <li name="images/Overwatch-shirt.png"> <img src="images/Overwatch-shirt.png" alt=""> </li>
+          <li name="images/Wow-shirt.png"> <img src="images/Wow-shirt.png" alt=""> </li>
+          <li name="images/Diablo-shirt.png"> <img src="images/Diablo-shirt.png" alt=""> </li>
+        </ul>
+        <p>Рубашка</p>
+      </section>
+      <section class="you-win unactive">
+        <article>
+          <p>Поздравляю! Ты победил.</p>
+          <p class="time-passed" id="timePassed"></p>
+          <input type="button" name="" value="Начать заново" id="startAgen" class="start-agen">
+        </article>
+      </section>
+      <section class="field">
+        <article class="rules-container active">
+          <h2>Привет друг,проверим твою внимательность?</h2>
+          <p>Твоя задача найти две одинаковые карты, совершив наименьшее количество попыток.</p>
+          <h3>Правила:</h3>
+          <ol class="rules-list">
+            <li>Кликни по двум картам,чтобы найти одинаковые.</li>
+            <li>Если изображения совпадают, ты молодец! Продолжай дальше.</li>
+            <li>Если изображения не совпадают, повтори попытку.</li>
+            <li>Игрок который найдет все изображения побеждает.</li>
+            <li>Удачи!</li>
+          </ol>
+          <input type="button" name="" value="Далее" class="button-next" id="buttonNext">
+        </article>
+        <form class="signin-container  unactive" action="index.html" method="post">
+          <div class="form-elements-container">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" placeholder="минимум 6 символов">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName"  placeholder="минимум 6 символов">
+            <label for="email">Email</label>
+            <input type="text" id="email"  placeholder="минимум 12 символов">
+            <input type="button" value="Назад" id="backToRules" class="button-back-to-rules">
+            <input type="button" value="Войти" id="login" class="button-login">
+            <input type="submit" value="Поехали" id="playGame" class="button-play-game" name="signinButtonPlay">
+            <p>Зарегестрируйтесь или войдите под существующим пользователем</p>
+          </div>
+        </form>
+        <form class="login-container unactive" action="index.html" method="post">
+          <div class="form-elements-container">
+            <label for="firstNameLogin">First name</label>
+            <input type="text" id="firstNameLogin">
+            <label for="lastNameLogin">Last Name</label>
+            <input type="text" id="lastNameLogin">
+            <input type="button" value="Назад" id="backToRegistration" class="button-back-to-rules">
+            <input type="submit" value="Поехали" id="playGame" class="button-play-game" name="loginButtonPlay">
+          </div>
+        </form>
+        <article class="game-container unactive">
+        </article>
+      </section>
+    </main>
+    <script type="text/javascript" src="script/Timer.js"></script>
+    <script type="text/javascript" src="script/Card.js"></script>
+    <script type="text/javascript" src="script/index.js"></script>
+  </body>
+</html>
